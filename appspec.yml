@@ -1,6 +1,7 @@
 version: 0.0
 os: linux
 
+hooks:
 
   AfterInstall:
     - location: start_container.sh
