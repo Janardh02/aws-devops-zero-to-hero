@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
 
-containerid=$(docker ps -q)
+# Remove all containers (running + stopped)
+containerid=$(docker ps -aq)
 
 if [ -n "$containerid" ]; then
     docker rm -f $containerid
